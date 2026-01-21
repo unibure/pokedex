@@ -20,6 +20,7 @@ const PokemonCard = ({ pokemonList, handlePokemonClick }) => {
               </span>
             </div>
             <img
+              loading="lazy"
               src={pokemon.sprites.other["official-artwork"].front_default}
               alt={pokemon.koreanName}
             />
