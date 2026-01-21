@@ -14,9 +14,7 @@ function App() {
   const targetRef = useRef(null);
   const observerRef = useRef(null);
   const MAX_POKEMON = 151; //1세대 포켓몬 최대 개수
-
   const [search, setSearch] = useState(""); //검색어 상태
-
   const [selectedPokemon, setSelectedPokemon] = useState(null);
 
   // 포켓몬 데이터 가져오기
@@ -65,6 +63,9 @@ function App() {
 
   // IntersectionObserver 설정
   useEffect(() => {
+    if (pokemons.length === 0 || loading) { 
+      return;
+    }
     const handleIntersect = (entries) => {
       // 투명 박스가 화면에 들어왔거나, 로딩중이 아니고, 아직 151개 미만일 때만
       if (
