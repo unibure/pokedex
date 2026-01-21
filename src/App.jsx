@@ -129,6 +129,7 @@ function App() {
           transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
         >
           <motion.div
+            onClick={() => window.location.reload()}
             className="logo-container"
             whileHover={{
               scale: 1.05,
@@ -241,6 +242,29 @@ function App() {
             handleCloseModal={handleCloseModal}
           />
         )}
+
+        <motion.div
+          className="top-btn"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          whileHover={{ scale: 1.1, backgroundColor: "#646cff" }}
+          whileTap={{ scale: 0.9 }}
+          role="button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </motion.div>
       </div>
     </motion.div>
   );
