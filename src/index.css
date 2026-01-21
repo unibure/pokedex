@@ -113,7 +113,7 @@ button:focus-visible {
 .poke-content .poke-list .list .top {display: flex; justify-content: space-between;}
 .poke-content .poke-list .list .top .number {font-size: 1rem;}
 .poke-content .poke-list .list .top .name {font-size: 1.2rem; font-weight: 600;}
-.poke-content .poke-list .list img {max-width: 100px; width: 100%; display: block; margin: 0 auto;}
+.poke-content .poke-list .list img {max-width: 100px; width: 100%; display: block; margin: 0 auto; aspect-ratio: 1/1; object-fit: contain; height:auto;}
 .poke-content .poke-list .list .type {display: flex; justify-content: space-around; gap: 1rem;}
 .poke-content .poke-list .list .type span {font-size: 1rem; border-radius: 15px; padding: 0.25rem 1rem; min-width: 80px; border: 1px solid var(--type-color); background-color: var(--type-color); font-weight: 700; width: 100%;}
 
@@ -159,7 +159,7 @@ button:focus-visible {
 .pokemon-modal .modal-content .modal-body {display: flex; flex-direction: column; padding: 2.5rem; overflow-y: auto;}
 .pokemon-modal .modal-header-section {display: flex; flex-direction: column; align-items: center; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);}
 .pokemon-modal .modal-image {width: 240px; height: 240px; display: flex; justify-content: center; align-items: center; background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%); border-radius: 20px; padding: 1rem;}
-.pokemon-modal .modal-image img {width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));}
+.pokemon-modal .modal-image img {width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3)); aspect-ratio:1/1; height:auto;}
 .pokemon-modal .modal-name {font-size: 1.5rem; font-weight: 700; color: #fff; margin: 0; text-align: center;}
 .pokemon-modal .modal-number {font-size: 1.2rem; font-weight: 600; color: rgba(255, 255, 255, 0.6); letter-spacing: 2px;}
 .pokemon-modal .modal-types {display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;}

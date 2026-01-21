@@ -13,7 +13,9 @@ export default function PokemonModal({ pokemon, handleCloseModal }) {
           <div className="modal-header-section">
             <div className="modal-image">
               <img
-                loading="lazy"
+								loading="lazy"
+								width={240}
+								height={240}
                 src={pokemon.sprites.other["official-artwork"].front_default}
                 alt={pokemon.koreanName}
               />

@@ -19,11 +19,15 @@ const PokemonCard = ({ pokemonList, handlePokemonClick }) => {
                 {/* 문자열의 길이를 최소 3자리로 맞추고 짧다면 부족한 만큼 앞을 0으로 채우기 */}
               </span>
             </div>
-            <img
-              loading="lazy"
-              src={pokemon.sprites.other["official-artwork"].front_default}
-              alt={pokemon.koreanName}
-            />
+            <div className="image">
+              <img
+                loading="lazy"
+                width={100}
+                height={100}
+                src={pokemon.sprites.other["official-artwork"].front_default}
+                alt={pokemon.koreanName}
+                />
+            </div>
             <div className="type">
               {pokemon.type.map((typeInfo) => (
                 <span
