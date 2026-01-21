@@ -231,7 +231,7 @@ function App() {
         </motion.div>
 
         {/* 검색 중이 아닐때만 무한 스크롤 활성화 */}
-        {!isSearching && pokemons.length < MAX_POKEMON && (
+        {pokemons.length < MAX_POKEMON && (
           <div className="loading" ref={targetRef}></div>
         )}
 
