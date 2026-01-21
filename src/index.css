@@ -156,14 +156,13 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
   border-radius: 50%;
   background: rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.6);
   cursor: pointer;
   margin-left: 0.5rem;
   transition: all 0.2s ease;
+  padding: 10px;
 }
 
 .poke-container .search-box .search-clear:hover {
@@ -411,7 +410,7 @@ button:focus-visible {
 }
 
 .pokemon-modal .modal-name {
-  font-size: 2rem; 
+  font-size: 1.7rem; 
   font-weight: 800; 
   color: #fff; 
   margin: 0; 

@@ -217,7 +217,10 @@ function App() {
         >
           {isSearching ? (
             filteredPokemons.length > 0 && (
-              <PokemonCard pokemonList={filteredPokemons} />
+              <PokemonCard
+                pokemonList={filteredPokemons}
+                handlePokemonClick={handlePokemonClick}
+              />
             )
           ) : (
             <PokemonCard
