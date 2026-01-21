@@ -199,14 +199,19 @@ button:focus-visible {
   .poke-content .poke-list .list {padding: 0.85rem; gap: 1.5rem;}
   .poke-content .poke-list {grid-template-columns: repeat(3,1fr);}
   
-  .pokemon-modal .modal-content {max-width: 95%; max-height: 95vh; overflow-y:auto;} 
+  .pokemon-modal .modal-content {max-width: 95%; max-height: 80vh; overflow-y:auto;} 
   .pokemon-modal .modal-content .modal-body {padding: 1rem;} 
-  .pokemon-modal .modal-content .modal-image {width: 150px; height: 150px;} 
-  .pokemon-modal .modal-content .modal-name {font-size: 1.5rem;} 
+  .pokemon-modal .modal-content .modal-image {width: 120px; height: 120px; padding: 0.5rem;} 
+  .pokemon-modal .modal-content .modal-name {font-size: 1.25rem; padding-bottom: .5rem;}
   .pokemon-modal .modal-content .info-row {gap: 2rem;}
   .pokemon-modal .modal-type-badge {padding:.2rem 1rem;}
-  .pokemon-modal .modal-info-section {padding: 1rem 0;}
+  .pokemon-modal .modal-info-section {padding: 1rem;}
+  .pokemon-modal .modal-stats-section {padding-block:1rem;}
+
   .pokemon-modal .info-value {font-size: 1.25rem;}
+  .pokemon-modal .info-item {gap: 0rem;}
+  .pokemon-modal .stats-title {font-size: 1rem;}
+  .pokemon-modal .modal-content .modal-close {width: 30px; height: 30px; font-size: 1rem;}
 }
 
 @media (max-width: 560px) {
@@ -214,6 +219,7 @@ button:focus-visible {
   .poke-container .search-box .search-btn {max-width: 80px; font-size: 0.9rem;}
   .poke-content .poke-list {grid-template-columns: repeat(2,1fr);}
   .poke-content .poke-list .list img {max-width: 88px;}
+  .poke-container .head h1 img {width: 200px;}
 }
 
 @media (max-width: 420px) {
