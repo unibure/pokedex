@@ -63,7 +63,7 @@ function App() {
 
   // IntersectionObserver 설정
   useEffect(() => {
-    if (pokemons.length === 0 || loading) { 
+    if (pokemons.length === 0 || loading) {
       return;
     }
     const handleIntersect = (entries) => {
@@ -126,17 +126,44 @@ function App() {
           className="head"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
         >
-          <motion.h1 whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <img src={pokeLogo} alt="pokemon logo" className="m-auto" />
-          </motion.h1>
+          <motion.div
+            className="logo-container"
+            whileHover={{
+              scale: 1.05,
+              filter: "drop-shadow(0 0 15px rgba(255,215,0,0.5))",
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img
+              loading="lazy"
+              src={pokeLogo}
+              alt="pokemon logo"
+              className="logo-img"
+            />
+          </motion.div>
+
           <motion.div
             className="search-box"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
           >
+            <div className="search-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
             <input
               type="text"
               value={search}
@@ -144,6 +171,30 @@ function App() {
               placeholder="포켓몬을 검색하세요..."
               className="search-input"
             />
+            {search && (
+              <motion.button
+                className="search-clear"
+                onClick={() => setSearch("")}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </motion.button>
+            )}
           </motion.div>
         </motion.div>
 
